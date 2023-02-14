@@ -36,19 +36,105 @@
             top: -40%;
         }
     }
-    
+    &.readMoreBtn {
+        height: 40px;
+        transition: all 0.3s;
+        & img {
+            transition: all 0.3s;
+        }
+        &:hover{
+            & img {
+                transform: translateX(10px);
+            }
+        }
+    }
+}
+
+
+.video_playBtn {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-sizing: content-box;
+    display: block;
+    width: 32px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 18px 20px 18px 28px;
+    &:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: $theme2;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: rgba($theme2, 0.8);
+        border-radius: 50%;
+        transition: all 200ms;
+    }
+    &:hover:after {
+        background-color: darken($theme2, 10%);
+    }
+    &  span {
+        display: block;
+        position: relative;
+        z-index: 3;
+        width: 0;
+        height: 0;
+        border-left: 32px solid $white;
+        border-top: 22px solid transparent;
+        border-bottom: 22px solid transparent;
+        & img {
+        position: relative;
+        z-index: 3;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        }
+}
+
+@keyframes pulse-border {
+    0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+    }
+    100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+    }
+}
 }
 
 
 
-
-
 // --------------------
-@media only screen and (max-width: 350.99px) {
+@media only screen and (max-width: 575.99px) {
 .download_btn {
     height: 40px;
     &.checkBtn {
         padding: 0 25px;
+    }
+    &.readMoreBtn {
+        height: 35px;
     }
 }
 }
