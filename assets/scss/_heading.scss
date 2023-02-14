@@ -1,0 +1,35 @@
+.subHeading {
+    & span {
+        letter-spacing: 1px;
+        position: relative;
+        &::after {
+        content: '';
+        width: 15px;
+        height: 2px;
+        background: $white;
+        position: absolute;
+        right: -9%;
+        top: 50%;
+        transform: translate(0% , -50%);
+        }
+    }
+}
+
+
+.heading{
+    & span {
+        position: relative;
+        letter-spacing: 1.5px;
+        padding-left: 1rem;
+        &::after{
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: $theme1;
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            transform: translate(-0%, -50%);
+        }
+    }
+}

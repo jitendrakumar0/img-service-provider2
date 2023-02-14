@@ -1,0 +1,171 @@
+.navbar {
+    z-index: 100;
+    & .navbar-brand {
+        height: 50px;
+        transition: all 0.3s;
+    }
+    .icone_list {
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+        width: 28px;
+        & img {
+            filter: brightness(100);
+        }
+    }
+    & .navbar-nav {
+        & .nav-item {
+            & .nav-link {
+                transition: all ease-in-out .3s;
+                &::before{
+                    content: "";
+                    width: 4px;
+                    height: 0px;
+                    background: $theme1;
+                    position: absolute;
+                    left: 0px;
+                    top: 50%;
+                    transform: translate(-0%, -50%);
+                    transition: all ease-in-out .3s;
+                }
+                &:hover {
+                    color: $gray-200 !important;
+                    &::before{
+                        height: 20px;
+                        right: 0;
+                        
+                    }
+                }
+                &.active{
+                    color: $gray-200 !important;
+                    &::before{
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.userAcount {
+    & .inneruser {
+        & .user {
+            transition: all ease-in-out .3s;
+            & img {
+                transition: all ease-in-out .3s;
+                width: 22px;
+            }
+            &:hover{
+                & img {
+                    filter: brightness(1000);
+                }
+            }
+        }
+    }
+}
+
+
+.tag_title {
+    letter-spacing: 0.1rem;
+}
+
+.offcanvas {
+    width: 280px !important;
+    & .offcanvas-header {
+        background-color: $gray-300;
+        & .offcanvas-title {
+            height: 40px;
+        }
+        & .closeBtn {
+            width: 20px;
+        }
+    }
+}
+
+.tag_list {
+    & li {
+        transition: all 0.3s;
+        & a {
+            transition: all 0.3s;
+            position: relative;
+            &::before {
+                content: "";
+                left: 0px;
+                bottom: -4px;
+                width: 15px;
+                height: 0.6px;
+                background-color: $theme2;
+                position: absolute;
+                transition: all 0.4s;
+            }
+        }
+        &:hover {
+            & a {
+                color: $theme1 !important;
+                &::before {
+                    opacity: 1;
+                    width: 100%;
+                }
+                letter-spacing: 0.3rem !important;
+                color: $theme2 !important;
+            }
+        }
+    }
+}
+.navbar{
+    transition: all 0.3s ease-in-out;
+
+}
+.nav-active {
+    box-shadow: 0px 0px 10px rgba($black, 0.08) !important;
+    background-color: $gray-300;
+    transition: all 1s !important;
+    transition: all 0.3s ease-in-out;
+    & .blackLogo {
+        display: block !important;
+    }
+    & .whiteLogo {
+        display: none;
+    }
+    &.navbar {
+        .icone_list {
+            & img {
+                filter: none;
+            }
+        }
+        & .navbar-nav {
+            & .nav-item {
+                & .nav-link {
+                    color: $theme2 !important;
+                    &::before{
+                        background: $theme1 !important;
+                    }
+                    &:hover {
+                        color: $theme1 !important;
+                        &::before{
+                            height: 20px;
+                            right: 0;
+                            
+                        }
+                    }
+                    &.active{
+                        color: $theme1 !important;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+
+.always-nav-active {
+    box-shadow: 0px 0px 10px rgba($black, 0.08) !important;
+    background-color: $gray-300;
+    transition: all 0.3s ease-in-out;
+
+    & .navbar-brand{
+        background-color: $white !important;
+        color: $black !important;
+        }
+}
+
