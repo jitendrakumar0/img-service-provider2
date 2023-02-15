@@ -41,6 +41,12 @@ if ($("[page-name=gallerySection]").length) {
     });
 }
 
+if ($("[page-name=projects]").length) {
+    var lightboxInlineIframe = GLightbox({
+        selector: '.glightbox2'
+    });
+}
+
 
 
 $('.example').owlCarousel({
