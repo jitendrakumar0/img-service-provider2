@@ -70,7 +70,7 @@
 }
 
 // *****************Brand Card Section *************
-.brandCard {
+.CompanyCards {
   & .inner_section{
     background-color: rgba($theme2, 0.3);
     & .card {
@@ -86,7 +86,7 @@
 
 
 // **************Globali Card*****************
-.cardSection {
+.serviceCard {
   & .card {
     box-shadow: 0px 0px 10px 0px rgba($black, 0.09);
     cursor: pointer;
@@ -97,6 +97,33 @@
       & .card-img {
         height: 50px;
         width: 50px;
+      }
+    }
+  }
+}
+.cardSection {
+  & .card {
+    box-shadow: 0px 0px 10px 0px rgba($black, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all ease-in-out .3s;
+    & .card-body {
+      & .card-img {
+        height: 50px;
+      }
+      & .readMoreBtn {
+        transition: all ease-in-out 0.3s;
+      }
+    }
+    &:hover{
+      &::after{
+        width: 100%;
+      }
+      & .card-body {
+        & .readMoreBtn {
+          transform: translateX(0);
+        }
       }
     }
   }
@@ -112,18 +139,13 @@
 }
 
 
-// ************Why Choose Us*****************
-.whychooseusSection {
-  & .inner_section {
-    & .contentSide {
-      & .details {
-        & li {
-          &::marker{
-            content: '\2713';
-            font-weight: 900;
-          }
-        }
-      }
+.detailsList{
+  & li {
+    padding-left: 0.5rem;
+    &::marker{
+      content: '\2713';
+      font-weight: 900;
+      color: $theme1;
     }
   }
 }
@@ -151,6 +173,7 @@
     display: flex;
     justify-content: end;
     gap: 15px;
+    right: 0;
     & button {
       &.owl-prev, &.owl-next {
         transition: all 0.3s;
@@ -181,7 +204,6 @@
 .resentproject {
   & .inner_section {
     & .card {
-      // height: 300px;
       & .card-img {
         & img {
           object-fit: cover;
@@ -242,6 +264,57 @@
   }
 }
 
+// *****************brandLogoSection**************
+.brandLogoSection {
+  & .inner_section {
+    & .innerBrand {
+      flex-wrap: nowrap;
+      overflow: auto hidden;
+      & .brandLogo {
+        height: 120px;
+        transition: all 0.3s;
+        overflow: hidden;
+        & img {
+            filter: grayscale(1);
+            transition: all 0.3s;
+            object-fit: cover;
+        }
+        &:hover {
+          & img {
+            filter: grayscale(0);
+            transform: scale(1.1);
+          }
+        }
+      }
+      &::-webkit-scrollbar-track {
+        height: 0px;
+        width: 0px;
+        background-color: transparent;
+        opacity: 0;
+      }
+      &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+        opacity: 0;
+      
+        /* Here */
+        display: none;
+        -webkit-border-radius: 0;
+      }
+    }
+  }
+}
 
 
 
