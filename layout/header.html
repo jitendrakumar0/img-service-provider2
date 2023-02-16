@@ -12,7 +12,7 @@
 			<li class="nav-item"><a class="nav-link position-relative fs-16 fw-bold fw-normal text-white" href="services.html">Services</a></li>
 			<li class="nav-item"><a class="nav-link position-relative fs-16 fw-bold fw-normal text-white" href="project.html">Projects</a></li>
 			<li class="nav-item"><a class="nav-link position-relative fs-16 fw-bold fw-normal text-white" href="contacts.html">Contact Us</a></li>
-			<li class="nav-item"><a href="javascript:;" class="download_btn text-white text-decoration-none">Sign In</a></li>
+			<li class="nav-item"><a href="javascript:;" class="download_btn text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Sign In</a></li>
 		</ul>
 	</div>
 </div>
@@ -31,6 +31,86 @@
 			<li class="mb-3"><a href="project.html" class="fs-14 d-flex w-100 text-uppercase fw-normal text-black text-decoration-none">Package</a></li>
 			<li class="mb-3"><a href="blog.html" class="fs-14 d-flex w-100 text-uppercase fw-normal text-black text-decoration-none">Blog</a></li>
 			<li class="mb-3"><a href="contacts.html" class="fs-14 d-flex w-100 text-uppercase fw-normal text-black text-decoration-none">Contact Us</a></li>
+			<li class="mb-3"><a href="javascript:;" class="download_btn text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Sign In</a></li>
 		</ul>
 	</div>
 </div>
+
+
+
+
+<!-- *****************Login Modal************* -->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	<div class="modal-content">
+	<div class="modal-header border-0">
+		<div class="modal-title fs-25 text-theme1  fw-bold" id="exampleModalToggleLabel">Sign Up</div>
+		<button type="button" class="btn-close border-0 shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+	</div>
+	<div class="modal-body contentForm">
+		<form class="row mx-0 g-3 needs-validation" novalidate="">
+			<div class="col-sm-6" >
+				<input type="text" class="form-control border-0 text-black py-md-3 py-2 px-0 shadow-none rounded-0 fs-14" placeholder="Username" id="validationCustom001" required="">
+				<div class="invalid-feedback fs-10">Please enter valid username</div>
+			</div>
+			<div class="col-sm-6" >
+				<input type="email" class="form-control border-0 text-black py-md-3 py-2 px-0 shadow-none rounded-0 fs-14" placeholder="Email" id="validationCustom002" required="">
+				<div class="invalid-feedback fs-10">Please provide a valid email.</div>
+			</div>
+			<div class="col-sm-6" >
+				<input type="tel" class="form-control border-0 text-black py-md-3 py-2 px-0 shadow-none rounded-0 fs-14" placeholder="Contact Number" id="validationCustom003" required="">
+				<div class="invalid-feedback fs-10">Please provide a valid number.</div>
+			</div>
+			<div class="col-sm-6" >
+				<input type="password" class="form-control border-0 text-black py-md-3 py-2 px-0 shadow-none rounded-0 fs-14" placeholder="Password" id="validationCustom004" required="">
+				<div class="invalid-feedback fs-10">Please enter password.</div>
+			</div>
+			<div class="col-12" >
+				<input type="password" class="form-control border-0 text-black py-md-3 py-2 px-0 shadow-none rounded-0 fs-14" placeholder="Confirm Password" id="validationCustom005" required="">
+				<div class="invalid-feedback fs-10">Please enter Confirm password.</div>
+			</div>
+			<div class="col-12 mt-4 text-end" >
+				<button class="download_btn main_btn border-0 shadow-none text-white" type="submit">SIGN UP</button>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer d-flex justify-content-end align-items-center border-0 pt-0">
+		<div class="fs-12">Already Have an account?</div>
+		<button class="btn text-theme1 ps-0 fs-14 shadow-none border-0" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign In</button>
+	</div>
+	</div>
+</div>
+</div>
+	<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+		<div class="modal-header">
+			<div class="modal-title fs-25 text-theme1 fw-bold" id="exampleModalToggleLabel2">Sign In</div>
+			<button type="button" class="btn-close border-0 shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body contentForm">
+			<form class="row mx-0 g-3 needs-validation" novalidate="">
+				<div class="col-12" >
+					<input type="text" class="form-control border-0 text-black py-md-3 py-2 px-0 shadow-none rounded-0 fs-14" placeholder="Username" id="validationCustom006" required="">
+					<div class="invalid-feedback fs-10">Please enter valid username</div>
+				</div>
+				<div class="col-12" >
+					<input type="password" class="form-control border-0 text-black py-md-3 py-2 px-0 shadow-none rounded-0 fs-14" placeholder="Password" id="validationCustom007" required="">
+					<div class="invalid-feedback fs-10">Please enter password.</div>
+				</div>
+				<div class="col-12">
+					<a href="javascript:;" class="text-decoration-none fs-14 text-theme2">Forgot Password?</a>
+				</div>
+				<div class="col-12 mt-4 text-end" >
+					<button class="download_btn main_btn border-0 shadow-none text-white" type="submit">SIGN IN</button>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer d-flex justify-content-end align-items-center border-0 pt-0">
+			<div class="fs-12">Don't have an account?</div>
+			<button class="btn text-theme1 ps-0 fs-14 shadow-none border-0" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign Up</button>
+		</div>
+		</div>
+	</div>
+</div>
+<!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button> -->

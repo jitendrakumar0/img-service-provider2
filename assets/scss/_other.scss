@@ -297,10 +297,11 @@
   & .inner_section {
     & .cardsection {
       & .card {
+        border: 1px dotted $theme2 !important;
         & .card-body {
           & .chooseList {
-            height: 100px;
-            width: 100px;
+            height: 60px;
+            width: 60px;
             z-index: 2;
             box-shadow: 0px 0px 10px 0px rgba($black, 0.2) !important;
             transition: all ease-in-out 0.3s;
@@ -311,6 +312,7 @@
               background-color: $theme2 !important;
               & img {
                 filter: brightness(100);
+                transform: scale(1.1);
               }
             }
           }
@@ -318,8 +320,20 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            border-bottom: 2px dashed rgba($black, 0.2);
+            border-bottom: 2px dashed rgba($theme1, 0.1);
             z-index: 1;
+          }
+        }
+        & .subBody {
+          & .card-text {
+            transition: all 0.3s;
+          }
+        }
+        &:hover {
+          & .subBody {
+            & .card-text {
+              color: $theme1 !important;
+            }
           }
         }
       }
@@ -382,8 +396,11 @@
       & .teamCard {
         & .card {
           cursor: unset;
+          border-radius: 0px !important;
           & .card-body {
-            height: 300px;
+            // height: 300px;
+            min-height: 250px;
+            border-radius: 0px !important;
             overflow: hidden;
             transition: all ease-in-out 0.3s;
             position: relative;
@@ -400,18 +417,19 @@
           }
           & .icons {
             right: 20px;
-            top: 20px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
+            bottom: 21px;
+            // opacity: 0;
+            // visibility: hidden;
+            // transform: translateY(10px);
             transition: all ease-in-out 0.3s;
             z-index: 3;
             & .socillinkfooter {
               z-index: 2;
               & li {
                 & a {
-                  width: 35px;
-                  height: 35px;
+                  width: 30px;
+                  height: 30px;
+                  margin: 0px !important;
                 }
               }
             }
@@ -423,23 +441,27 @@
             
           }
           & .readmorebtnPrent {
-            margin: -73px 0px 0px -150px;
+            margin: -73px 0px 0px 0px;
             transition: all  ease-in-out 0.3s;
             z-index: 2;
+            & .readMoreBtn  {
+              color: $white !important;
+            }
           }
           & .card-img-top {
             object-fit: cover;
+          border-radius: 0px !important;
           }
-          &:hover {
-            & .icons {
-              opacity: 1;
-              transform: translateY(0px);
-              visibility: visible;
-            }
-            & .readmorebtnPrent {
-              margin: -73px 0px 0px 0px;
-            }
-          }
+          // &:hover {
+          //   & .icons {
+          //     opacity: 1;
+          //     transform: translateY(0px);
+          //     visibility: visible;
+          //   }
+          //   & .readmorebtnPrent {
+          //     margin: -73px 0px 0px 0px;
+          //   }
+          // }
           &.active {
             & .readmorebtnPrent {
               margin: -73px 0px 0px 0px;
@@ -467,18 +489,26 @@
           box-shadow: 0px 0px 10px 0px rgba($black, 0.1);
           & .card-body {
             & .sideBarheading {
-              &::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 50%;
-                width: 20px;
-                height: 2px;
-                background-color: rgba($theme2, 0.8);
+              display: inline-block;
+              padding-left: 1rem !important;
+              position: relative;
+              letter-spacing: 1.5px;
+              padding-left: 1rem;
+              &::after{
+                  content: "";
+                  width: 4px;
+                  height: 20px;
+                  background: $theme1;
+                  position: absolute;
+                  left: 0px;
+                  top: 50%;
+                  transform: translate(-0%, -50%);
               }
             }
             & .input-group {
               & .form-control {
+                background: transparent;
+                border-bottom: 1px solid $theme2 !important;
                   &:focus-visible{
                     border-color: $theme1;
                   }
@@ -488,9 +518,11 @@
                 }
               & .input-group-text {
                 & .searchBtn {
-                  width: 50px;
+                  width: 32px;
+                  background: transparent !important;
+                  border-bottom: 1px solid $theme2 !important;
                   & img {
-                    filter: brightness(100);
+                    // filter: brightness(100);
                   }
                 }
               }
@@ -554,6 +586,7 @@
             & .tagsGroup {
               & .tagslink {
                   transition: all ease-in-out 0.3s;
+                  border-radius: 4px !important;
                   & a {
                     transition: all ease-in-out 0.3s;
                   }
@@ -561,13 +594,19 @@
                   background-color: $theme2 !important;
                   & a {
                     color: $white !important;
+                    letter-spacing: 1px;
                   }
                 }
               }
             }
             & .contactBlog {
               & .iconImg {
-                width: 50px;
+                height: 30px;
+              }
+              & > div {
+                &:first-child {
+                  padding: 0px !important;
+                }
               }
               & .postLink {
                 transition: all ease-in-out 0.3s;
@@ -780,7 +819,6 @@
   
 }
 
-
 // -------------------Responsive---------------------
 @media only screen and (max-width: 767.99px) {
   [page-name="gallerySection"] {
@@ -819,20 +857,19 @@
   }
 }
 @media only screen and (max-width: 575.99px) {
-  .contactsSection {
-    & .inner_section {
-      & .cardsection {
-        & .card {
-          & .card-body {
-            & .chooseList {
-              height: 90px;
-              width: 90px;
-            }
+.blogSection {
+  & .inner_section {
+    & .leftSide {
+      & .teamCard{
+        & .card{
+          & .icons{
+            bottom: 13px;
           }
         }
       }
     }
   }
+}
   .disclaimerPageSection {
     & .inner_section {
       & .disclaimerCaseImg {
