@@ -50,6 +50,18 @@
     }
 }
 
+.filtterBtn {
+    width: 28px;
+    padding: 0px !important;
+    
+}
+
+.replayBtn {
+    transition: all 0.3s;
+    &:hover{
+        background-color: rgba($theme1, 0.8) !important;
+    }
+}
 
 .video_playBtn {
     position: absolute;
@@ -137,4 +149,25 @@
         height: 35px;
     }
 }
+}
+@media only screen and (max-width: 767.99px) {
+
+    .video_playBtn {
+        width: 32px;
+        height: 44px;
+        padding: 18px 20px 18px 28px;
+        &:before {
+        width: 70px;
+        height: 70px;
+    }
+        &:after {
+            width: 70px;
+            height: 70px;
+        }
+        &:hover:after {
+            background-color: darken($theme2, 10%);
+        }
+        
+    }
+    
 }

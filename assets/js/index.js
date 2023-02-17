@@ -3,7 +3,7 @@ $(window).on('load', function () {
     setTimeout(function () { 
         $('.page-loader').fadeOut('slow');
         $('body').removeClass('overflow-hidden');
-    }, 500);
+    }, 1000);
 });
 
 $(window).scroll(function () {
@@ -97,44 +97,76 @@ if ($("[page-name=mainLandingPage]").length) {
     });
 
 
-    if ($("[page-name=aboutusPage],[page-name=servicesPage]").length) {
-        $('.owlCard').owlCarousel({
-            loop: true,
-            items: 6,
-            padding: 0,
-            margin: 20,
-            nav: true,
-            dots: false,
-            // autoplay: true,
-            // freeDrag: false,
-            // lazyLoad: true,
-            // autoplayTimeout: 2000,
-            // autoplayHoverPause: true,
-            // smartSpeed: 1200,
-            navigation: true,
-            responsiveClass: true,
-            navText: ["<img src='assets/img/icons/owlleftarrow.svg'>","<img src='assets/img/icons/owlrightarrow.svg'>"],
-            responsive: {
-                0: {
-                    items: 1
-                },
-                576: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                },
-                992: {
-                    items: 3
-                },
-                1299: {
-                    items: 3
-                }
+    $('.owlCard').owlCarousel({
+        loop: true,
+        items: 6,
+        padding: 0,
+        margin: 20,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        freeDrag: false,
+        lazyLoad: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        smartSpeed: 1200,
+        navigation: true,
+        responsiveClass: true,
+        navText: ["<img src='assets/img/icons/owlleftarrow.svg'>","<img src='assets/img/icons/owlrightarrow.svg'>"],
+        responsive: {
+            0: {
+                items: 1
             },
-        });
-    }
-
-    
+            576: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            },
+            1299: {
+                items: 3
+            }
+        },
+    });
+}
+if ($("[page-name=aboutusPage],[page-name=servicesPage]").length) {
+    $('.owlCard').owlCarousel({
+        loop: true,
+        items: 6,
+        padding: 0,
+        margin: 20,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        freeDrag: false,
+        lazyLoad: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        smartSpeed: 1200,
+        navigation: true,
+        responsiveClass: true,
+        navText: ["<img src='assets/img/icons/owlleftarrow.svg'>","<img src='assets/img/icons/owlrightarrow.svg'>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            },
+            1299: {
+                items: 3
+            }
+        },
+    });
 }
 
 

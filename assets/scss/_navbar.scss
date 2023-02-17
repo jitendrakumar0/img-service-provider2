@@ -80,10 +80,9 @@
             width: 20px;
         }
     }
-    &.offcanvas-end {
-        width: 360px !important;
-    }
+    
 }
+
 
 .tag_list {
     & li {
@@ -173,10 +172,10 @@
 }
 
 
-@media only screen and (min-width: 575.99px) {
-    .offcanvas {
-        &.offcanvas-end {
-            width: 400px !important;
+@media only screen and (max-width: 991.99px) {
+    .rightSideBar  {
+        &.offcanvas-lg {
+            width: 500px !important;
         }
     }
 }
