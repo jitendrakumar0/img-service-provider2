@@ -849,11 +849,11 @@
 
 // ******************404 Error**************
 .error404Page {
-  // height: calc(100vh - 10px);
-    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/404.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-color: $dark !important;
+    // background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/404.jpg);
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
     & .inner_section{
       & .errorNumber {
         font-size: 150px;
